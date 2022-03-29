@@ -107,9 +107,9 @@ namespace pcl
         static int SolveSymmetric( const SparseMatrix<T>& M , const Vector<T2>& b , int iters , Vector<T2>& solution , const T2 eps=1e-8 , int reset=1 , int threads=1 );
 
         bool write( FILE* fp ) const;
-        bool write( const char* fileName ) const;
+        bool write( const char* filename ) const;
         bool read( FILE* fp );
-        bool read( const char* fileName );
+        bool read( const char* filename );
     };
 
     template< class T2 >

@@ -1938,8 +1938,8 @@ namespace pcl
     }
 
     template <class NodeData,class Real>
-    int OctNode<NodeData,Real>::write(const char* fileName) const{
-      FILE* fp=fopen(fileName,"wb");
+    int OctNode<NodeData,Real>::write(const char* filename) const{
+      FILE* fp=fopen(filename,"wb");
       if(!fp){return 0;}
       int ret=write(fp);
       fclose(fp);
@@ -1954,8 +1954,8 @@ namespace pcl
     }
 
     template <class NodeData,class Real>
-    int OctNode<NodeData,Real>::read(const char* fileName){
-      FILE* fp=fopen(fileName,"rb");
+    int OctNode<NodeData,Real>::read(const char* filename){
+      FILE* fp=fopen(filename,"rb");
       if(!fp){return 0;}
       int ret=read(fp);
       fclose(fp);

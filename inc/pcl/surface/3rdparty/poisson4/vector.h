@@ -84,9 +84,9 @@ namespace pcl
         void Normalize();
 
         bool write( FILE* fp ) const;
-        bool write( const char* fileName ) const;
+        bool write( const char* filename ) const;
         bool read( FILE* fp );
-        bool read( const char* fileName );
+        bool read( const char* filename );
 
         T* m_pV;
       protected:

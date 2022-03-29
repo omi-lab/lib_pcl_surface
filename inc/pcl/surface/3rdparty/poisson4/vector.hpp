@@ -246,18 +246,18 @@ namespace pcl
     }
 
     template< class T >
-    bool Vector< T >::read( const char* fileName )
+    bool Vector< T >::read( const char* filename )
     {
-      FILE* fp = fopen( fileName , "rb" );
+      FILE* fp = fopen( filename , "rb" );
       if( !fp ) return false;
       bool ret = read( fp );
       fclose( fp );
       return ret;
     }
     template< class T >
-    bool Vector< T >::write( const char* fileName ) const
+    bool Vector< T >::write( const char* filename ) const
     {
-      FILE* fp = fopen( fileName , "wb" );
+      FILE* fp = fopen( filename , "wb" );
       if( !fp ) return false;
       bool ret = write( fp );
       fclose( fp );

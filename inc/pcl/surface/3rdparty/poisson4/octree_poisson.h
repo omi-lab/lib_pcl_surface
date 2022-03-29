@@ -185,9 +185,9 @@ namespace pcl
         static inline int Overlap2(const int &depth1,const int offSet1[DIMENSION],const Real& multiplier1,const int &depth2,const int offSet2[DIMENSION],const Real& multiplier2);
 
 
-        int write(const char* fileName) const;
+        int write(const char* filename) const;
         int write(FILE* fp) const;
-        int read(const char* fileName);
+        int read(const char* filename);
         int read(FILE* fp);
 
         class Neighbors3
