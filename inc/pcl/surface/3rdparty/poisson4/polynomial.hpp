@@ -77,7 +77,7 @@ namespace pcl
       for(int i=0;i<=Degree;i++){p.coefficients[i+1]=coefficients[i]/(i+1);}
       return p;
     }
-    template<> inline double Polynomial< 0 >::operator() ( double t ) const { return coefficients[0]; }
+    template<> inline double Polynomial< 0 >::operator() ( double /*t*/ ) const { return coefficients[0]; }
     template<> inline double Polynomial< 1 >::operator() ( double t ) const { return coefficients[0]+coefficients[1]*t; }
     template<> inline double Polynomial< 2 >::operator() ( double t ) const { return coefficients[0]+(coefficients[1]+coefficients[2]*t)*t; }
     template<int Degree>
@@ -300,7 +300,7 @@ namespace pcl
       }
     }
     template< > inline
-    Polynomial< 0 > Polynomial< 0 >::BSplineComponent( int i )
+    Polynomial< 0 > Polynomial< 0 >::BSplineComponent( int /*i*/ )
     {
       Polynomial p;
       p.coefficients[0] = 1.;
